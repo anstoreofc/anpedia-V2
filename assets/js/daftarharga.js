@@ -37,17 +37,3 @@ fetch(API_URL)
         alert('Gagal memuat data. Silakan coba lagi.');
         loader.style.display = 'none';
     });
-    function showPopup(kode, produk, keterangan) {
-        const popup = document.getElementById('popup');
-        const popupTitle = document.getElementById('popupTitle');
-        const popupDescription = document.getElementById('popupDescription');
-        const closePopup = document.getElementById('closePopup');
-    
-        popupTitle.textContent = `${produk} (${kode})`;
-        popupDescription.textContent = keterangan || 'Tidak ada keterangan tambahan.';
-        popup.style.display = 'block';
-    
-        closePopup.addEventListener('click', () => {
-            popup.style.display = 'none';
-        });
-    }
