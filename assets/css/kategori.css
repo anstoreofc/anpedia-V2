@@ -29,7 +29,7 @@ main .content {
 
 .list-group-item a:hover {
     color: darkcyan;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .accordion-item, .list-group-item {
     border: 1px solid darkcyan;
