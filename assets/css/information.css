@@ -30,7 +30,7 @@ main .content{
     position: absolute;
     display: none;
     background: inherit;
-    border: 1px solid #ddd;
+    border: 1px solid darkcyan;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -40,17 +40,22 @@ main .content{
 
 .content-item {
     cursor: pointer;
-    color: #333;
+    color: inherit;
 }
 
 .content-item:hover {
-    color: darkc;
+    color: darkcyan;
     text-decoration: underline;
 }
 .card {
     border: 1px solid darkcyan;
 }
-
+#dataCount {
+    border: 1px solid darkcyan;
+}
+#search {
+    border: 1px solid darkcyan;
+}
 .card-header {
     background-color: darkcyan; 
     color: white; 
@@ -59,7 +64,10 @@ main .content{
     background-color: darkcyan; 
     color: white; 
 }
-
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid teal; 
+}
 .navbar {
     margin-bottom: 20px;
     color: white !important;
