@@ -29,10 +29,10 @@ main .content {
 
 .list-group-item a:hover {
     color: darkcyan;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .accordion-item, .list-group-item {
-    border: 1px solid teal;
+    border: 1px solid darkcyan;
 }
 footer {
     position: fixed;
