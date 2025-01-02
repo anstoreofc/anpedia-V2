@@ -32,9 +32,9 @@ function loadTable(data) {
     paginatedData.forEach(transaction => {
         const row = document.createElement("tr");
         let statusClass = "";
-        if (transaction.status === "Success") statusClass = "text-success";
-        else if (transaction.status === "Pending") statusClass = "text-warning";
-        else if (transaction.status === "Failed") statusClass = "text-danger";
+        if (transaction.status === "Success") statusClass = "status-success";
+        else if (transaction.status === "Pending") statusClass = "status-pending";
+        else if (transaction.status === "Failed") statusClass = "status-failed";
 
         row.innerHTML = `
             <td>${transaction.date}</td>
