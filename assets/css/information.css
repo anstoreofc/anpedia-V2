@@ -30,7 +30,7 @@ main .content{
     position: absolute;
     display: none;
     background: inherit;
-    border: 1px solid teal;
+    border: 1px solid darkcyan;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,16 +45,16 @@ main .content{
 
 .content-item:hover {
     color: darkcyan;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .card {
-    border: 1px solid teal;
+    border: 1px solid darkcyan;
 }
 #dataCount {
-    border: 1px solid teal;
+    border: 1px solid darkcyan;
 }
 #search {
-    border: 1px solid teal;
+    border: 1px solid darkcyan;
 }
 .card-header {
     background-color: darkcyan; 
