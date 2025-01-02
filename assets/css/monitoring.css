@@ -33,7 +33,7 @@ footer {
 }
 .filter-section .form-select,
 .filter-section .form-control {
-    border: 1px solid darkcyan;
+    border: 1px solid teal;
     border-radius: 5px; 
 }
 
@@ -47,7 +47,7 @@ footer {
     }
 }
 .card {
-    border: 1px solid darkcyan;
+    border: 1px solid teal;
 }
 
 .navbar {
