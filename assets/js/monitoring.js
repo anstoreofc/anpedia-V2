@@ -37,7 +37,11 @@ function loadTable(data) {
         else if (transaction.status === "Failed") statusClass = "status-failed";
 
         row.innerHTML = `
-            <td>${transaction.date}</td>
+            <td>
+                <span class="date-item text-primary" data-id="${transaction.id}">
+                    ${transaction.date}
+                </span>
+            </td>
             <td>${transaction.service}</td>
             <td>${transaction.product}</td>
             <td>${transaction.target}</td>
@@ -46,7 +50,24 @@ function loadTable(data) {
         transactionTable.appendChild(row);
     });
 
-    createPagination(data.length); 
+    document.querySelectorAll(".date-item").forEach(el => {
+        el.addEventListener("click", event => {
+            const transactionId = event.target.getAttribute("data-id");
+            showPopup(transactionId);
+        });
+    });
+    function showPopup(transactionId) {
+        const popup = document.getElementById("popup");
+        const popupText = document.getElementById("popupText");
+        popupText.textContent = `${transactionId}`;
+        popup.classList.remove("hidden");
+    }
+    
+    document.getElementById("closePopup").addEventListener("click", () => {
+        document.getElementById("popup").classList.add("hidden");
+    });
+    
+    createPagination(data.length);
 }
 
 function createPagination(totalItems) {
