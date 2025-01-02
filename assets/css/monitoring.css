@@ -31,6 +31,11 @@ footer {
 .filter-section {
     margin-bottom: 20px;
 }
+.filter-section .form-select,
+.filter-section .form-control {
+    border: 1px solid darkcyan;
+    border-radius: 5px; 
+}
 
 @media (max-width: 768px) {
     .filter-section {
@@ -43,10 +48,6 @@ footer {
 }
 .card {
     border: 1px solid darkcyan;
-}
-.card-header {
-    background-color: black;
-    color: white;
 }
 
 .navbar {
@@ -93,9 +94,9 @@ footer {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid darkcyan;
     background-color: white;
-    color: black;
+    color: darkcyan;
     margin: 0 2px;
     transition: all 0.3s ease; 
 }
@@ -107,8 +108,8 @@ footer {
 }
 
 #paginationContainer button:hover {
-    background-color: white; 
-    color: darkcyan;
+    background-color: darkcyan; 
+    color: white;
     cursor: pointer;
 }
 
@@ -116,7 +117,7 @@ footer {
     display: inline-block;
     padding: 5px;
     font-size: 16px;
-    color: gray;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -148,6 +149,10 @@ th, td {
     white-space: nowrap; 
     vertical-align: middle; 
 }
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid teal; 
+}
 
 @media (max-width: 576px) {
     th, td {
@@ -156,5 +161,7 @@ th, td {
 
     .table-responsive {
         margin-bottom: 15px; 
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
