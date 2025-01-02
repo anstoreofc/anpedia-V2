@@ -30,7 +30,7 @@ main .content{
     position: absolute;
     display: none;
     background: inherit;
-    border: 1px solid darkcyan;
+    border: 1px solid teal;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -48,13 +48,13 @@ main .content{
     text-decoration: underline;
 }
 .card {
-    border: 1px solid darkcyan;
+    border: 1px solid teal;
 }
 #dataCount {
-    border: 1px solid darkcyan;
+    border: 1px solid teal;
 }
 #search {
-    border: 1px solid darkcyan;
+    border: 1px solid teal;
 }
 .card-header {
     background-color: darkcyan; 
