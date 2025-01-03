@@ -39,10 +39,15 @@ main .content{
 }
 
 .content-item {
+    display: block;
     cursor: pointer;
-    color: inherit;
 }
-
+#tableBody td {
+    position: relative; 
+    padding-right: 100px; 
+    white-space: normal; 
+    word-wrap: break-word; 
+}
 .content-item:hover {
     color: darkcyan;
     text-decoration: none;
@@ -81,4 +86,14 @@ main .content{
 
 .form-label {
     margin-bottom: 0;
+}
+.text-muted {
+    position: absolute; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 0.7rem;
+    color: inherit; 
+    margin: 0;
+    white-space: nowrap; 
 }
