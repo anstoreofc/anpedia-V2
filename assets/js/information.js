@@ -29,7 +29,7 @@ function formatDate(dateString) {
     const year = date.getFullYear();
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
-    return `${day}/${month}/${year} ${hours}:${minutes} WIB`;
+    return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
 
 function renderTable() {
@@ -49,7 +49,7 @@ function renderTable() {
                     <span class="content-item fw-bold" data-index="${index}">
                         ${item.content}
                     </span>
-                    <small class="text-muted ms-2">(${formatDate(item.createdAt)})</small>
+                    <span class="text-muted ms-2">${formatDate(item.createdAt)}</span>
                 </td>
             </tr>
         `;
