@@ -51,21 +51,31 @@ function loadTable(data) {
     });
 
     document.querySelectorAll(".date-item").forEach(el => {
-        el.addEventListener("click", event => {
-            const transactionId = event.target.getAttribute("data-id");
-            showPopup(transactionId);
-        });
+    el.addEventListener("click", event => {
+        const transactionId = event.target.getAttribute("data-id");
+        showPopup(transactionId);
     });
-    function showPopup(transactionId) {
-        const popup = document.getElementById("popup");
-        const popupText = document.getElementById("popupText");
-        popupText.textContent = `${transactionId}`;
-        popup.classList.remove("hidden");
+});
+
+function showPopup(transactionId) {
+    const popup = document.getElementById("popup");
+    const popupText = document.getElementById("popupText");
+    popupText.textContent = `${transactionId}`;
+    popup.classList.remove("hidden");
+}
+
+const closePopup = document.getElementById("closePopup");
+const popup = document.getElementById("popup");
+
+closePopup.addEventListener("click", () => {
+    popup.classList.add("hidden");
+});
+
+popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        popup.classList.add("hidden");
     }
-    
-    document.getElementById("closePopup").addEventListener("click", () => {
-        document.getElementById("popup").classList.add("hidden");
-    });
+});
     
     createPagination(data.length);
 }
